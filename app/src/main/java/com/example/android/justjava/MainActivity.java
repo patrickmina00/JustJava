@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.TextView;
-
 import java.text.NumberFormat;
 
 
@@ -23,7 +22,10 @@ public class MainActivity extends ActionBarActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        displayPrice(this.quantity * 5);
+        int price = quantity * 5;
+        String priceMessage = "Price: $" + (price)+"\nThank you!";
+        displayMessage(priceMessage);
+        //displayPrice(this.quantity * 5);
     }
 
     public void increment(View view) {
@@ -41,7 +43,7 @@ public class MainActivity extends ActionBarActivity {
             //displayPrice(this.quantity * 5);
         } else {
             display(this.quantity);
-           //displayPrice(this.quantity * 5);
+            //displayPrice(this.quantity * 5);
         }
     }
 
