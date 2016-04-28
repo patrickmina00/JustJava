@@ -23,8 +23,8 @@ public class MainActivity extends ActionBarActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int price  = quantity*5;
-        String priceMessage = "Price: $" + (price);
+        int price = quantity * 5;
+        String priceMessage = "Price: $" + (price)+"\nThank you!";
         displayMessage(priceMessage);
         //displayPrice(this.quantity * 5);
     }
@@ -44,7 +44,7 @@ public class MainActivity extends ActionBarActivity {
             //displayPrice(this.quantity * 5);
         } else {
             display(this.quantity);
-           //displayPrice(this.quantity * 5);
+            //displayPrice(this.quantity * 5);
         }
     }
 
@@ -64,7 +64,7 @@ public class MainActivity extends ActionBarActivity {
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
 
-    private void displayMessage(String message){
+    private void displayMessage(String message) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(message);
     }
